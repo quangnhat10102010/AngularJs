@@ -1,0 +1,58 @@
+<table class="table table-bordered table-striped table-highlight">
+<h2>Product Detail</h2>
+   <tr>
+        <td>
+            <p>Name:</p>
+        </td>
+        <td>
+            <p>{{product.name | uppercase}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Model:</p>
+        </td>
+        <td>
+            <p>{{product.name | uppercase}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Year:</p>
+        </td>
+        <td>
+            <p>{{product.year}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Price:</p>
+        </td>
+        <td>
+            <p>{{product.price | currency}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Producer:</p>
+        </td>
+        <td>
+            <p>{{product.producer}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Available:</p>
+        </td>
+        <td>
+            <p>{{product.available}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <input type="button" name="search" value="Back to Main Store" ng-click="back('/mainstore')"/>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,35 @@
+<div class="container">
+	<h2>Product List</h2>
+	<table class="table">
+	    <thead>
+	        <tr>
+	        	<th>Name</th>
+	            <th>Model</th>
+	            <th>Year</th>
+	            <th>Price</th>
+	            <th>Producer</th>
+	            <th>Available</th>
+	            <th>Action</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="item in products">
+	        	<td style="display:none">{{item.id}}</td>
+	            <td>
+	            	<a href="#/product/detail/{{item.id}}">{{item.name | uppercase}}</a>
+            	</td>
+            	<td>{{item.model}}</td>
+	            <td>{{item.year}}</td>
+	            <td>{{item.price | currency}}</td>
+	            <td>{{item.producer}}</td>
+	            <td style="width: 125px">
+	            	<div class="availabele-cal" style="display:inline">
+	            		<i style="cursor: pointer" class="glyphicon glyphicon-plus btn btn-sm btn-success" ng-click="plus(item)">+</i>
+	            		<p style="margin-bottom: 0px !important; display:inline">{{item.available}}</p>
+	            		<i style="cursor: pointer" class="glyphicon glyphicon-minus btn btn-sm btn-warning" ng-click="minus(item)">-</i>
+	            	</div>
+                <td><i style="cursor: pointer" class="glyphicon glyphicon-trash btn btn-danger" ng-click="remove(item)">Remove</i></td>
+	        </tr>
+	    </tbody>
+	</table>
+</div>
